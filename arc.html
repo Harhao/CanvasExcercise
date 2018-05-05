@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>arc</title>
+</head>
+<body>
+	<canvas id="canvas" width="5000px" height="800px"></canvas>
+	<script type="text/javascript">
+	window.onload=function(){
+		var canvas=document.getElementById('canvas');
+		var context=canvas.getContext('2d');
+		for(var i=0;i<100;i++){
+			context.beginPath();
+			context.arc(50+i*40,200,40,0,2*Math.PI*(i+1)/100);
+			// context.closePath();
+			context.stroke();
+		}
+	}
+	</script>
+</body>
+</html>

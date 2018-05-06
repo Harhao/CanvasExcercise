@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lineCap</title>
+	<style type="text/css">
+		#canvas{
+			transform: scale(0.5);
+		}
+	</style>
+</head>
+<body>
+	<div id="canvas-wrap">
+		<canvas id="canvas" width="800px" height="600px">
+			你的浏览器居然不支持Canvas！赶紧换一个
+		</canvas>
+	</div>
+	<script type="text/javascript">
+	window.onload=function(){
+		var canvas=document.getElementById('canvas');
+		var context=canvas.getContext('2d');
+		context.lineWidth= 2;
+		context.lineCap="bevel";
+		context.beginPath();
+		context.moveTo(100,100);
+		context.lineTo(200,150);
+		context.lineTo(100,200);
+		context.closePath();
+		context.fillStyle="#00ff00";
+		context.fill();
+		context.beginPath();
+		context.moveTo(200,20);
+		context.lineTo(400,150);
+		context.lineTo(200,280);
+		context.closePath();
+		context.fillStyle="#00ff00";
+		context.fill();
+		context.beginPath();
+		context.arc(350,150,10,0,2*Math.PI);
+		context.strokeStyle="#000000";
+		context.stroke();
+		context.beginPath();
+		context.arc(350,150,5,0,2*Math.PI);
+		context.fillStyle="#000000";
+		context.fill();
+		context.beginPath();
+		context.arc(350,150,15,0.5*Math.PI,1.5*Math.PI);
+		context.strokeStyle="#000000";
+		context.stroke();
+	}
+
+	</script>
+
+</body>
+</html>

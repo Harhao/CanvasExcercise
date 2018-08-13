@@ -1,2 +1,2 @@
 # CanvasExcercise
-canvas demo excercise
+- canvas API和普通图形线条的绘画练习demo
